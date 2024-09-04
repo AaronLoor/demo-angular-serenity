@@ -1,0 +1,63 @@
+<p-toast></p-toast>
+
+<div class="fondoLogin">
+  <div class="container">
+    <div class="formBox level-login">
+      <div class="box boxShaddow"></div>
+      <div class="box loginBox">
+        <div class="logoContainer">
+          <img
+            class="loginLogo"
+            src="../../../assets/images/farm to table (2).svg"
+            alt=""
+          />
+        </div>
+
+        <form [formGroup]="loginForm">
+          <div class="f_row last">
+            <input
+              pInputText
+              id="user"
+              type="text"
+              formControlName="user"
+              placeholder="  Usuario"
+            />
+            <small
+              class="p-error"
+              *ngIf="
+                loginForm.get('user')?.touched && loginForm.get('user')?.errors
+              "
+            >
+              El campo Usuario es requerido.</small
+            >
+            <u></u>
+          </div>
+          <div class="f_row last">
+
+            <p-password [toggleMask]="true"  id="password" formControlName="password" placeholder="Contraseña" [feedback]="false"></p-password>
+<!--             <input-->
+<!--              pInputText-->
+<!--              id="password"-->
+<!--              type="text"-->
+<!--              formControlName="password"-->
+<!--              placeholder="Contraseña"-->
+<!--            />-->
+            <small
+              class="p-error"
+              *ngIf="
+                loginForm.get('password')?.touched &&
+                loginForm.get('password')?.errors
+              "
+            >
+              El campo Contraseña es requerida.</small
+            >
+            <u></u>
+          </div>
+          <button id="btn" type="submit" (click)="login()" class="btn">
+            <span>Iniciar Sesion</span><u></u>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

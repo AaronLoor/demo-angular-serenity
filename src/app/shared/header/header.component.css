@@ -1,0 +1,35 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre logo y menú */
+  align-items: center; /* Alinea verticalmente el contenido */
+  background-color: #000000; /* Color de fondo */
+  padding: 10px 20px; /* Espaciado interno */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar un efecto de elevación */
+}
+.top-bar span{
+  color: #ffff;
+  font-weight: bold;
+}
+i{
+  color: #ffff;
+  font-weight: bold;
+}
+.logo{
+  margin-right: 0.5rem;
+}
+.nav-item{
+  margin-inline: 0.5rem;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo del menú de navegación */
+.nav-menu {
+  display: flex;
+  gap: 15px; /* Espaciado entre los enlaces */
+}
+
+

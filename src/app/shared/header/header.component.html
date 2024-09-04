@@ -1,0 +1,52 @@
+<header class="top-bar">
+  <p-button [outlined]="true"   routerLink="/inicio">
+      <img
+        class="logo"
+        alt="logo"
+        src="https://media.licdn.com/dms/image/v2/D4E0BAQEFUV75NCaG1A/company-logo_200_200/company-logo_200_200/0/1708303007475/puntonet_sa_logo?e=2147483647&v=beta&t=f0S-Jpui7vZZyBhHfMx2sDr9x3fVBoEMqWbFfxzE3cs"
+        style="width: 1.5rem"
+      />
+      <span class="font-bold" > PuntoNet </span>
+      </p-button>
+
+<div class="nav-container">
+
+
+
+  <p-button
+
+    class="nav-item in"
+    [rounded]="true"
+    severity="info"
+    [outlined]="true"
+
+  ><i class="pi pi-user"></i></p-button>
+
+  <span *ngIf="userLoginOn" class="user-name">
+    {{userData?.name}}   {{userData?.lastName}}
+   </span>
+
+  <p-button
+  *ngIf="userLoginOn"
+  class="nav-item"
+
+  [text]="true"
+  severity="info"
+  [outlined]="true"
+  (onClick)="singOut()"
+
+> <i class="pi pi-sign-out"></i></p-button>
+
+  <p-button
+    *ngIf="!userLoginOn"
+    class="nav-item"
+
+    [text]="true"
+    severity="info"
+    [outlined]="true"
+    routerLink="/inicio-sesion"
+
+  ><i class="pi pi-sign-in"></i>
+  </p-button>
+</div>
+</header>
